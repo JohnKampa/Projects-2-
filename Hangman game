@@ -1,0 +1,42 @@
+# possible letters
+possible_letters = "qwertzuioplmnbvcxyasdfghjk"
+
+print(f"All possible letters are: {possible_letters}")
+
+word = input("What is your word? ")
+
+# Check allowed length
+if all(char in possible_letters for char in word):
+    print("Word is valid.")
+    word_length = len(word)
+    print(f"Word length is {word_length}.")
+else:
+    print("Word is too long or contains invalid characters.")
+    quit()
+
+maxtrys = 9
+mintrys = 0
+
+while mintrys <= maxtrys:
+    guess = input("Make your guess: ")
+
+    if guess == word:
+        print("Congratulations! You guessed the word.")
+        break  # Exit the loop
+
+    if guess in word:
+        print(f"The letter '{guess}' is present in the word.")
+    else:
+        print(f"The letter '{guess}' is not present in the word.")
+
+    mintrys += 1  
+
+    if mintrys == maxtrys:
+        print("You've run out of tries. The correct word was:", word)
+        break  # Exit the loop
+
+
+
+
+
+

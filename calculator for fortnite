@@ -1,0 +1,29 @@
+print("NUR ZAHLEN")
+
+while True:
+    print(" ")
+
+    try:
+        ping = float(input("Gib deinen Ping ein (nur Zahlen): "))
+        sch = float(input("Gib deine Reaktionszeit in 5 Klicks ein (nur Zahlen): "))
+    except ValueError:
+        print("Ungültige Eingabe. Bitte nur Zahlen eingeben.")
+        continue
+
+    halb = float(ping) * 2
+    BPM = float(60000) / float(halb)
+
+    print("BPM:", BPM)
+
+    if BPM > sch:
+        print("Du kannst besser werden.")
+    else :
+        print("Skill gecapped") 
+    
+
+    ant = input("Nochmal? ja/nein: ")
+    print(ant)
+
+    if ant.lower() != "ja":
+            break   
+    

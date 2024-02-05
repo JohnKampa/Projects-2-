@@ -1,0 +1,24 @@
+import random
+import time
+
+while True:
+    kj = int(input("Choose your chambre: "))
+    print("Your choice:", kj)
+    time.sleep(1)
+    jh = random.randint(1, 6)
+    print("Shot from chambre:", jh)
+
+    if kj == jh:
+        print("YOU'RE DEAD")
+        break  
+    else:
+        print("You're alive!")
+
+
+quit()
+
+
+
+
+
+

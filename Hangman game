@@ -1,6 +1,6 @@
 # possible letters
 possible_letters = "qwertzuioplmnbvcxyasdfghjk"
-
+#ball
 print(f"All possible letters are: {possible_letters}")
 
 word = input("What is your word? ")
